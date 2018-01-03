@@ -21,7 +21,7 @@ class ActivityTest < Minitest::Test
 
     assert activity.participants.empty?
 
-    activity.add_participant('William', 0)
+    activity.add_participant('William', 0.00)
 
     assert ({'William' => 0.00}), activity.participants
   end
@@ -71,8 +71,3 @@ class ActivityTest < Minitest::Test
     assert_equal 3.00, result['Ella']
   end
 end
-
-# You can split the cost of an activity
-# You can evaluate out how much each person is owed/owes
-# If a participant paid less than their fair share they owe a positive amount.
-# If a participant paid more than their fair share they owe a negative amount (meaning they are owed money).

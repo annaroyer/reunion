@@ -12,7 +12,7 @@ class Activity
   end
 
   def total_cost
-    @participants.values.reduce(0, :+)
+    @participants.values.sum
   end
 
   def split
@@ -20,10 +20,8 @@ class Activity
   end
 
   def balance
-    balance = {}
-    @participants.each do |name, amount_paid|
-      balance[name] = split - amount_paid
+    @participants.transform_values do |amount|
+      split - amount
     end
-    return balance
   end
 end

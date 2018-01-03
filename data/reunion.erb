@@ -7,11 +7,15 @@
   <h1>Thanks for comming to our reunion in <%=reunion.location %>!</h1>
   <p>
     <table>
-      <th>Activities</th>
-      <% reunion.activites.each do |activity| %>
-      <tr><td><%= activity.name %></tr></td>
+      <th>Activities</th><th>Participants</th><th><th>Cost per person</th>
+      <% reunion.activities.each do |activity| %>
+      <tr>
+        <td><%= activity.name %></td>
+        <td><%= activity.participants.keys.join(', ') %></td>
+        <td><%= activity.total_cost %></td>
+      </tr>
+      <% end %>
     </table>
   </p>
-
 </body>
 </html>

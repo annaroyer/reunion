@@ -10,7 +10,7 @@ hiking.add_participant('Sylvia', 0.00)
 hiking.add_participant('Lucia', 0.00)
 hiking.add_participant('Isabella', 0.00)
 
-skating = Activity.new('roller_skating')
+skating = Activity.new('roller skating')
 skating.add_participant('William', 20.00)
 skating.add_participant('Sylvia', 13.00)
 skating.add_participant('Lucia', 7.00)
