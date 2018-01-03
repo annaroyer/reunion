@@ -1,0 +1,17 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Reunion</title>
+</head>
+<body>
+  <h1>Thanks for comming to our reunion in <%=reunion.location %>!</h1>
+  <p>
+    <table>
+      <th>Activities</th>
+      <% reunion.activites.each do |activity| %>
+      <tr><td><%= activity.name %></tr></td>
+    </table>
+  </p>
+
+</body>
+</html>
